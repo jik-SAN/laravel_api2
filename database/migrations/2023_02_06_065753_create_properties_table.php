@@ -16,7 +16,7 @@ return new class extends Migration
     {
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
-             $table->unsignedBigInteger('broker_id');
+            $table->unsignedBigInteger('broker_id');
             $table->string('address');
             $table->enum('listing_type', [
                 ListingTypeEnum::OPEN->value,
@@ -31,9 +31,9 @@ return new class extends Migration
             $table->timestamps();
 
             $table->foreign('broker_id')
-                ->references('id')
-                ->on('brokers')
-                ->cascadeOnDelete();
+            ->references('id')
+            ->on('brokers')
+            ->cascadeOnDelete();
 
             $table->unique(['address', 'zip_code']);
         });

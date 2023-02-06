@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Broker extends Model
+class PropertyCharacteristic extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'name', 'address', 'city', 'zip_code', 'phone_number', 'logo_path'
-    ];
+        'property_id', 'price', 'bedrooms', 'bathrooms', 'sqft', 'price_sqft', 'status',
+        'property_type'];
 }
